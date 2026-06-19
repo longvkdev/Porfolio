@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long Vu — Senior Unity Developer | VR & Multiplayer Specialist</title>
+  <meta name="description" content="Senior Unity Developer with 8+ years of experience. Specialized in VR (Meta Quest), multiplayer architecture (Photon Fusion 2), and high-performance game development.">
+  <meta name="keywords" content="Unity Developer, Game Developer, VR Developer, C#, Photon Fusion, Meta Quest, Ho Chi Minh City">
+  <meta name="author" content="Long Vu">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Long Vu — Senior Unity Developer">
+  <meta property="og:description" content="8+ years engineering high-performance games across mobile, PC, and VR platforms.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon (game controller emoji as SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">LV<span>.dev</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#demos">Demos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name">
+        Long <span class="highlight">Vu</span>
+      </h1>
+
+      <p class="hero-role">Senior Unity Developer · VR & Multiplayer Specialist</p>
+
+      <div class="hero-typing">
+        <span id="typing-text"></span>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number" data-target="8" data-suffix="+">0+</div>
+          <div class="stat-label">Years Exp</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="10" data-suffix="+">0+</div>
+          <div class="stat-label">Games Shipped</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="60" data-suffix="%">0%</div>
+          <div class="stat-label">Draw Call Cut</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="90" data-suffix=" FPS">0 FPS</div>
+          <div class="stat-label">Meta VRC1</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          🎮 View My Work
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          ✉️ Get in Touch
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual fade-in-left">
+          <div class="about-image-wrapper">
+            <div class="avatar-placeholder">
+              <div class="avatar-icon">🎮</div>
+              <div class="avatar-text">LONG VU</div>
+            </div>
+          </div>
+          <div class="about-float-card">
+            <div class="float-icon">🏆</div>
+            <div class="float-info">
+              <h4>Meta VRC1 Certified</h4>
+              <p>90+ FPS Guaranteed</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content fade-in-right">
+          <div class="section-label">— About Me</div>
+          <h3>Crafting immersive gaming<br>experiences since 2017</h3>
+          <p>
+            I'm a Senior Unity Developer with over 8 years of experience engineering
+            high-performance games across mobile, PC, and VR platforms. I specialize in
+            multiplayer architecture using Photon Fusion 2, advanced rendering optimization,
+            and complex UI/UX implementation.
+          </p>
+          <p>
+            My track record includes leading technical features in distributed teams —
+            bridging the gap between creative design and hardware limitations to deliver
+            highly optimized, immersive experiences. I actively leverage AI code generation
+            to accelerate delivery cycles by up to 30%.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="hi-icon">⚡</span>
+              <span class="hi-text">Performance Optimization</span>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon">🌐</span>
+              <span class="hi-text">Multiplayer Architecture</span>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon">🥽</span>
+              <span class="hi-text">VR/AR Development</span>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon">🤖</span>
+              <span class="hi-text">AI-Accelerated Workflows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">— Technical Arsenal</div>
+        <h2 class="section-title">Skills & <span class="gradient-text">Expertise</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card fade-in">
+          <div class="skill-icon purple">🎯</div>
+          <h3>Unity Engine</h3>
+          <p>8+ years of deep expertise in Unity development — from mobile games to VR experiences on Meta Quest.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">DOTS</span>
+            <span class="skill-tag">Editor Tools</span>
+            <span class="skill-tag">Asset Bundles</span>
+            <span class="skill-tag">Addressables</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon teal">🌐</div>
+          <h3>Multiplayer Networking</h3>
+          <p>Expert in real-time multiplayer with Photon Fusion 2, Mirror, and Unity Netcode for seamless online experiences.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Photon Fusion 2</span>
+            <span class="skill-tag">Mirror</span>
+            <span class="skill-tag">Netcode</span>
+            <span class="skill-tag">State Sync</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon pink">🥽</div>
+          <h3>VR Development</h3>
+          <p>Building immersive VR experiences for Meta Quest with VRC1 certification — ensuring 90+ FPS performance.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Meta Quest</span>
+            <span class="skill-tag">VRC1</span>
+            <span class="skill-tag">XR Toolkit</span>
+            <span class="skill-tag">Hand Tracking</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon gold">⚡</div>
+          <h3>Performance & Shaders</h3>
+          <p>60%+ draw call reduction through custom vertex shaders, batching, and rendering pipeline optimization.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">HLSL/GLSL</span>
+            <span class="skill-tag">Dissolve</span>
+            <span class="skill-tag">Outline</span>
+            <span class="skill-tag">Stencil Buffer</span>
+            <span class="skill-tag">URP</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon blue">📱</div>
+          <h3>Cross-Platform</h3>
+          <p>Shipping games on iOS, Android, and VR. Native plugin integration and platform-specific optimization.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">iOS</span>
+            <span class="skill-tag">Android</span>
+            <span class="skill-tag">Cocos Creator</span>
+            <span class="skill-tag">Gideros</span>
+            <span class="skill-tag">Cloud Build</span>
+          </div>
+        </div>
+
+        <div class="skill-card fade-in">
+          <div class="skill-icon green">🛠️</div>
+          <h3>Backend & Tools</h3>
+          <p>Full-stack capabilities with Node.js/Express, Django/PostgreSQL, and extensive third-party SDK integration.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">PlayFab</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">— Career Journey</div>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline">
+        <!-- CurlyBlue -->
+        <div class="timeline-item current">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Mar 2025 — Present</span>
+          <div class="timeline-card">
+            <h3>Senior Unity Developer</h3>
+            <div class="company"><a href="https://curlyblue.com/" target="_blank" rel="noopener">CurlyBlue</a> · VR Game Studio</div>
+            <ul>
+              <li>Slashed draw calls by over 60% (from 400+ to 150+) by refactoring mannequin rendering and writing custom vertex shaders</li>
+              <li>Secured a rock-solid 90+ FPS, passing Meta's strict VRC1 certification for Quest headsets</li>
+              <li>Engineered complex, synchronized VR gameplay mechanics (Zipline, Prop Transformation, Storage Lockers) using Photon Fusion 2</li>
+              <li>Integrated AI code generation to build custom Unity editor tools, accelerating delivery cycles by up to 30%</li>
+              <li>Led technical implementation collaborating with Squido Studio (Canada) under rigorous Git/PR workflows</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://www.meta.com/en-gb/experiences/shmackle/8557045787751880/" target="_blank" rel="noopener" class="project-link">
+                🥽 Shmackle — Meta Quest
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enish -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">Nov 2021 — Nov 2024</span>
+          <div class="timeline-card">
+            <h3>Senior Unity Developer</h3>
+            <div class="company"><a href="https://www.enish.jp/" target="_blank" rel="noopener">Enish Inc</a> · Japanese Game Publisher</div>
+            <ul>
+              <li>Developed major out-game features and optimized codebase for smooth mobile performance</li>
+              <li>Implemented Box Music, Map Area Selector (Stencil Buffer), Japanese world map (Mercator Projection), and Guild System</li>
+              <li>Reviewed team PRs to ensure code quality and feature alignment</li>
+              <li>Collaborated closely with GD and QA teams to refine and test game features</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://lastmemories.io/" target="_blank" rel="noopener" class="project-link">
+                🎮 De:Lithe Last Memories
+              </a>
+              <a href="https://yurucamp-game.enish.com/" target="_blank" rel="noopener" class="project-link">
+                ⛺ Yuru Camp△
+              </a>
+              <a href="https://5hanayome-puzzle.enish.com/" target="_blank" rel="noopener" class="project-link">
+                🧩 Quintessential Quintuplets
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GoGame -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <span class="timeline-date">2017 — 2021</span>
+          <div class="timeline-card">
+            <h3>Unity Developer</h3>
+            <div class="company"><a href="https://gogame.net/" target="_blank" rel="noopener">GoGame Pte. Ltd.</a> · Singapore Game Studio</div>
+            <ul>
+              <li>Implemented new features and handled bug fixes across multiple live titles</li>
+              <li>Optimized game performance and managed build scripts for continuous delivery</li>
+              <li>Developed cloud build scripts for player and asset bundles</li>
+              <li>Led task management and project merging across teams</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://dragonproject.fandom.com/wiki/Dragon_Project_Wiki" target="_blank" rel="noopener" class="project-link">
+                🐉 Dragon Project
+              </a>
+              <a href="https://nickelodeon.fandom.com/wiki/Pixel_Town" target="_blank" rel="noopener" class="project-link">
+                🏘️ Pixel Town
+              </a>
+              <a class="project-link">
+                ✨ Beswitched Match-3
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">— Featured Work</div>
+        <h2 class="section-title">Key <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Shmackle (Featured) -->
+        <div class="project-card featured fade-in">
+          <div class="project-media">
+            <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(108,92,231,0.2), rgba(0,206,201,0.1)), #12121a;">
+              <div style="text-align: center; padding: 40px;">
+                <div style="font-size: 4rem; margin-bottom: 16px;">🥽</div>
+                <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">SHMACKLE</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary);">VR Adventure on Meta Quest</div>
+              </div>
+            </div>
+            <div class="media-overlay"></div>
+          </div>
+          <div class="project-info">
+            <div class="project-platform">🥽 Meta Quest · VR</div>
+            <h3>Shmackle — VR Adventure & Hangout</h3>
+            <p>Led performance optimization achieving 90+ FPS for Meta VRC1 certification. Engineered multiplayer VR mechanics including Zipline systems, Prop Transformation, and Networked Storage using Photon Fusion 2. Reduced draw calls by 60%+ through custom vertex shaders.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Photon Fusion 2</span>
+              <span class="tech-tag">VR</span>
+              <span class="tech-tag">Custom Shaders</span>
+              <span class="tech-tag">Meta Quest</span>
+            </div>
+            <a href="https://www.meta.com/en-gb/experiences/shmackle/8557045787751880/" target="_blank" rel="noopener" class="project-cta">
+              View on Meta Store →
+            </a>
+          </div>
+        </div>
+
+        <!-- De:Lithe -->
+        <div class="project-card fade-in">
+          <div class="project-media">
+            <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(253,121,168,0.2), rgba(108,92,231,0.1)), #12121a;">
+              <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 8px;">⚔️</div>
+                <div style="font-size: 1.1rem; font-weight: 700;">De:Lithe Last Memories</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-platform">📱 Mobile · RPG</div>
+            <h3>De:Lithe Last Memories NFT</h3>
+            <p>Developed major out-game features for this NFT-integrated RPG. Optimized mobile performance and collaborated with Japanese development teams.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">NFT Integration</span>
+              <span class="tech-tag">Mobile</span>
+            </div>
+            <a href="https://lastmemories.io/" target="_blank" rel="noopener" class="project-cta">
+              Visit Website →
+            </a>
+          </div>
+        </div>
+
+        <!-- Yuru Camp -->
+        <div class="project-card fade-in">
+          <div class="project-media">
+            <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(0,206,201,0.2), rgba(253,203,110,0.1)), #12121a;">
+              <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 8px;">⛺</div>
+                <div style="font-size: 1.1rem; font-weight: 700;">Yuru Camp△</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-platform">📱 Mobile · Casual</div>
+            <h3>Yuru Camp△: Connect Everyone</h3>
+            <p>Built features for this anime-licensed casual mobile game based on the popular Yuru Camp series. Managed codebase optimization for smooth mobile performance.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Mobile</span>
+              <span class="tech-tag">Anime IP</span>
+            </div>
+            <a href="https://yurucamp-game.enish.com/" target="_blank" rel="noopener" class="project-cta">
+              Visit Website →
+            </a>
+          </div>
+        </div>
+
+        <!-- Gomoku -->
+        <div class="project-card fade-in">
+          <div class="project-media">
+            <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(253,203,110,0.2), rgba(108,92,231,0.1)), #12121a;">
+              <div style="text-align: center;">
+                <div style="font-size: 3rem; margin-bottom: 8px;">🧠</div>
+                <div style="font-size: 1.1rem; font-weight: 700;">Gomoku Multiplayer</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-platform">🎮 PC · Board Game</div>
+            <h3>Gomoku Multiplayer</h3>
+            <p>Personal project featuring AI opponent (Minimax algorithm), Local Multiplayer (Mirror/Netcode), and Online Multiplayer via Unity Services.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">Minimax AI</span>
+              <span class="tech-tag">Mirror</span>
+              <span class="tech-tag">Netcode</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Demos Section -->
+  <section class="video-showcase" id="demos">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">— Live Demos</div>
+        <h2 class="section-title">Feature <span class="gradient-text">Showcases</span></h2>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-item fade-in">
+          <a href="https://www.youtube.com/shorts/jtXIJ2DsclE" target="_blank" rel="noopener">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/jtXIJ2DsclE/maxresdefault.jpg" alt="VR Zipline Demo" loading="lazy">
+              <div class="play-btn"><span>▶</span></div>
+            </div>
+            <div class="video-caption">
+              <h4>VR Zipline System</h4>
+              <p>Networked VR locomotion · Shmackle</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="video-item fade-in">
+          <a href="https://www.youtube.com/watch?v=8Yg95NSxOB4" target="_blank" rel="noopener">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/8Yg95NSxOB4/maxresdefault.jpg" alt="Generator Tool" loading="lazy">
+              <div class="play-btn"><span>▶</span></div>
+            </div>
+            <div class="video-caption">
+              <h4>Zipline Generator Tool</h4>
+              <p>Custom editor tooling · Shmackle</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="video-item fade-in">
+          <a href="https://www.youtube.com/watch?v=HCLFAU1iLiI" target="_blank" rel="noopener">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/HCLFAU1iLiI/maxresdefault.jpg" alt="Networked Storage Locker" loading="lazy">
+              <div class="play-btn"><span>▶</span></div>
+            </div>
+            <div class="video-caption">
+              <h4>Networked Storage Locker</h4>
+              <p>Multiplayer sync · Photon Fusion 2</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="video-item fade-in">
+          <a href="https://www.youtube.com/watch?v=lrdr5vF7BF0" target="_blank" rel="noopener">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/lrdr5vF7BF0/maxresdefault.jpg" alt="Prop Transformation" loading="lazy">
+              <div class="play-btn"><span>▶</span></div>
+            </div>
+            <div class="video-caption">
+              <h4>Prop & Chicken Transformation</h4>
+              <p>VR interaction mechanics · Shmackle</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="video-item fade-in">
+          <a href="https://www.youtube.com/watch?v=asTSocbpDeU" target="_blank" rel="noopener">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/asTSocbpDeU/maxresdefault.jpg" alt="Custom Flag Shader" loading="lazy">
+              <div class="play-btn"><span>▶</span></div>
+            </div>
+            <div class="video-caption">
+              <h4>Flag Wind Shader (1 Draw Call)</h4>
+              <p>Custom vertex shader optimization</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="video-item fade-in">
+          <a href="https://www.youtube.com/watch?v=B-vx2FroAXo" target="_blank" rel="noopener">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/B-vx2FroAXo/maxresdefault.jpg" alt="Networked Gear Machines" loading="lazy">
+              <div class="play-btn"><span>▶</span></div>
+            </div>
+            <div class="video-caption">
+              <h4>Networked Gear & Drip Machines</h4>
+              <p>Synced VR gameplay · Photon Fusion 2</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">— Let's Connect</div>
+        <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-in-left">
+          <h3>Let's build something<br>extraordinary together</h3>
+          <p>
+            Whether you need a senior Unity developer for your VR project,
+            a multiplayer architect for your game, or just want to talk shop
+            about performance optimization — I'd love to hear from you.
+          </p>
+
+          <div class="contact-channels">
+            <a href="mailto:longvk.dev@gmail.com" class="contact-channel" id="contact-email">
+              <div class="channel-icon email-icon">📧</div>
+              <div class="channel-details">
+                <h4>Email</h4>
+                <p>longvk.dev@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/long-vu-34b560291/" target="_blank" rel="noopener" class="contact-channel" id="contact-linkedin">
+              <div class="channel-icon linkedin-icon">💼</div>
+              <div class="channel-details">
+                <h4>LinkedIn</h4>
+                <p>long-vu-34b560291</p>
+              </div>
+            </a>
+
+            <a href="tel:+84792313989" class="contact-channel" id="contact-phone">
+              <div class="channel-icon phone-icon">📱</div>
+              <div class="channel-details">
+                <h4>Phone</h4>
+                <p>0792 313 989</p>
+              </div>
+            </a>
+
+            <div class="contact-channel" id="contact-location">
+              <div class="channel-icon location-icon">📍</div>
+              <div class="channel-details">
+                <h4>Location</h4>
+                <p>Quận 11, Ho Chi Minh City · GMT+7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper fade-in-right">
+          <h3>Send me a message ✨</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          © 2025 Long Vu. Built with <span class="heart">♥</span> and lots of C#
+        </p>
+        <div class="footer-socials">
+          <a href="mailto:longvk.dev@gmail.com" class="footer-social" aria-label="Email">📧</a>
+          <a href="https://www.linkedin.com/in/long-vu-34b560291/" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>
