@@ -238,7 +238,10 @@ section {
 /* ===== HERO SECTION ===== */
 .hero {
   min-height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -385,9 +388,14 @@ section {
   animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
+.hero-actions .btn {
+  min-width: 220px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 14px 32px;
   border-radius: 12px;
@@ -426,10 +434,6 @@ section {
 }
 
 .scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -439,6 +443,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 2px;
   animation: fadeInUp 0.8s ease-out 0.8s both;
+  margin-top: 80px;
 }
 
 .scroll-mouse {
@@ -465,6 +470,16 @@ section {
 @keyframes scrollWheel {
   0% { opacity: 1; top: 6px; }
   100% { opacity: 0; top: 20px; }
+}
+
+@media (max-height: 750px) {
+  .scroll-indicator {
+    display: none;
+  }
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
 }
 
 /* ===== ABOUT SECTION ===== */
