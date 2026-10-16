@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Long Vu — Senior Unity Developer | Mobile, PC, VR & Multiplayer Specialist</title>
   <meta name="description" content="Senior Unity Developer with 8+ years of experience. Specialized in Mobile, PC, VR (Meta Quest), multiplayer architecture (Photon Fusion 2), and high-performance game development.">
   <meta name="keywords" content="Unity Developer, Game Developer, VR Developer, C#, Photon Fusion, Meta Quest, Ho Chi Minh City">
@@ -362,10 +363,12 @@
       <div class="projects-grid">
         <!-- SHIFT//01 -->
         <div class="project-card featured fade-in" id="shift01">
-          <a href="https://youtu.be/9ZdDmSG-S7E" target="_blank" rel="noopener" class="project-media video-thumb" style="display: block;" aria-label="Watch SHIFT//01 gameplay on YouTube">
-            <img src="https://img.youtube.com/vi/9ZdDmSG-S7E/hqdefault.jpg" alt="SHIFT//01 warehouse physics gameplay" loading="lazy">
-            <div class="play-btn" style="opacity: 1;"><span>▶</span></div>
-          </a>
+          <div class="project-media">
+            <video class="gameplay-video" controls playsinline preload="none" poster="assets/shift01-poster.svg" aria-label="SHIFT//01 gameplay highlights — 53 seconds">
+              <source src="assets/shift01-gameplay.mp4" type="video/mp4">
+              Your browser does not support video playback. <a href="assets/shift01-gameplay.mp4">Download the gameplay video</a>.
+            </video>
+          </div>
           <div class="project-info">
             <div class="project-platform">📦 Windows PC · Physics Prototype · 2026</div>
             <h3>SHIFT//01 — Fulfillment Protocol</h3>
@@ -392,16 +395,11 @@
         </div>
 
         <!-- Shmackle (Featured) -->
-        <div class="project-card featured fade-in">
-          <div class="project-media">
-            <div class="media-placeholder" style="background: linear-gradient(135deg, rgba(108,92,231,0.2), rgba(0,206,201,0.1)), #12121a;">
-              <div style="text-align: center; padding: 40px;">
-                <div style="font-size: 4rem; margin-bottom: 16px;">🥽</div>
-                <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">SHMACKLE</div>
-                <div style="font-size: 0.9rem; color: var(--text-secondary);">VR Adventure on Meta Quest</div>
-              </div>
-            </div>
-            <div class="media-overlay"></div>
+        <div class="project-card featured fade-in" id="shmackle">
+          <div class="project-media video-thumb" data-youtube-id="mK0lmWvBJ6w" data-start="33">
+            <button type="button" class="video-cover" aria-label="Play Shmackle gameplay here">
+              <img src="assets/shmackle-selected-frame.png" alt="Shmackle red character with knives — selected frame near 0:35.5" loading="lazy">
+            </button>
           </div>
           <div class="project-info">
             <div class="project-platform">🥽 Meta Quest · VR</div>
@@ -506,10 +504,24 @@
 
       <div class="video-grid">
         <div class="video-item fade-in">
-          <a href="https://youtu.be/9ZdDmSG-S7E" target="_blank" rel="noopener" class="video-thumb" style="display: block;" aria-label="Watch SHIFT//01 gameplay on YouTube">
-            <img src="https://img.youtube.com/vi/9ZdDmSG-S7E/hqdefault.jpg" alt="SHIFT//01 warehouse physics gameplay" loading="lazy">
-            <div class="play-btn"><span>▶</span></div>
-          </a>
+          <div class="video-thumb" data-youtube-id="mK0lmWvBJ6w" data-start="33">
+            <button type="button" class="video-cover" aria-label="Play Shmackle gameplay here">
+              <img src="assets/shmackle-selected-frame.png" alt="Shmackle red character with knives — selected frame near 0:35.5" loading="lazy">
+            </button>
+          </div>
+          <div class="video-caption">
+            <h4>Shmackle — VR Adventure &amp; Hangout</h4>
+            <p>Meta Quest · Photon Fusion 2 · Multiplayer gameplay</p>
+          </div>
+        </div>
+
+        <div class="video-item fade-in">
+          <div class="video-thumb">
+            <video class="gameplay-video" controls playsinline preload="none" poster="assets/shift01-poster.svg" aria-label="SHIFT//01 gameplay highlights — 53 seconds">
+              <source src="assets/shift01-gameplay.mp4" type="video/mp4">
+              Your browser does not support video playback. <a href="assets/shift01-gameplay.mp4">Download the gameplay video</a>.
+            </video>
+          </div>
           <div class="video-caption">
             <h4>SHIFT//01 — Warehouse Gameplay</h4>
             <p>Physics interaction · 60 Hz logging · Recorded-state replay</p>

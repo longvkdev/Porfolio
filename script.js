@@ -306,7 +306,7 @@ function initContactForm() {
 
 // ===== TILT EFFECT ON PROJECT CARDS =====
 function initTiltEffect() {
-  document.querySelectorAll('.project-card').forEach(card => {
+  document.querySelectorAll('.project-card:not(:has(video, .video-thumb))').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -333,8 +333,11 @@ function initVideoPlayers() {
       if (!videoId) return;
       
       const iframe = document.createElement('iframe');
-      iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
+      const start = this.getAttribute('data-start') || '0';
+      iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&start=${encodeURIComponent(start)}`);
       iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('title', this.querySelector('button')?.getAttribute('aria-label') || 'Gameplay video');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
       iframe.setAttribute('allowfullscreen', 'true');
       iframe.style.width = '100%';
