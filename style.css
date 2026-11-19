@@ -366,6 +366,9 @@ section[id], article[id] { scroll-margin-top: 72px; }
 .play-btn .ico { margin-left: 4px; }
 .play-btn.sm { width: 54px; height: 54px; font-size: 20px; }
 .video-cover:hover .play-btn { transform: translate(-50%, -50%) scale(1.08); background: rgba(139, 123, 255, 0.85); }
+.vibe .video-cover:hover .play-btn { background: var(--vibe); color: var(--vibe-ink); border-color: var(--vibe); }
+.video-thumb.is-playing .video-cover,
+.video-thumb.is-playing .hud-chip { display: none; }
 
 .video-frame { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--line-strong); background: #000; aspect-ratio: 16 / 9; }
 .gameplay-video { width: 100%; height: 100%; object-fit: cover; background: #0c1018; }
@@ -473,7 +476,7 @@ a.title-card:hover { transform: translateY(-4px); border-color: var(--studio-lin
 .gallery-thumb:hover { opacity: 0.85; }
 .gallery-thumb.is-active { opacity: 1; border-color: var(--vibe); }
 .hud-chip {
-  position: absolute; left: 12px; top: 12px;
+  position: absolute; left: 12px; top: 12px; z-index: 2; pointer-events: none;
   display: inline-flex; align-items: center; gap: 8px;
   padding: 5px 10px; border-radius: 8px;
   font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; color: #fff;

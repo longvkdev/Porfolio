@@ -100,13 +100,16 @@
       button.addEventListener('click', () => {
         const id = thumb.dataset.youtubeId;
         const start = thumb.dataset.start || '0';
+        const existing = thumb.querySelector('iframe');
+        if (existing) existing.remove();
         const iframe = document.createElement('iframe');
         iframe.src = `https://www.youtube.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&start=${encodeURIComponent(start)}`;
         iframe.title = button.getAttribute('aria-label') || 'Gameplay video';
         iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
         iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
         iframe.setAttribute('allowfullscreen', '');
-        thumb.replaceChildren(iframe);
+        thumb.classList.add('is-playing');
+        thumb.appendChild(iframe);
         iframe.focus();
       });
     });
@@ -115,13 +118,20 @@
   // ===== Screenshot galleries =====
   function initGalleries() {
     document.querySelectorAll('[data-gallery]').forEach(gallery => {
+      const stage = gallery.querySelector('.gallery-stage');
       const main = gallery.querySelector('.gallery-main');
       const thumbs = Array.from(gallery.querySelectorAll('.gallery-thumb'));
       // Warm the cache so swaps are instant.
       thumbs.forEach(t => { const img = new Image(); img.src = t.dataset.src; });
       thumbs.forEach(thumb => {
         thumb.addEventListener('click', () => {
-          if (thumb.classList.contains('is-active')) return;
+          const activeIframe = stage ? stage.querySelector('iframe') : null;
+          if (activeIframe) {
+            activeIframe.remove();
+            stage.classList.remove('is-playing');
+          } else if (thumb.classList.contains('is-active')) {
+            return;
+          }
           thumbs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-pressed', 'false'); });
           thumb.classList.add('is-active');
           thumb.setAttribute('aria-pressed', 'true');
